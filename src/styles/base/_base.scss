@@ -1,0 +1,24 @@
+@use "../abstracts/abstract" as abs;
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: abs.$font-primary;
+  font-weight: abs.$font-medium;
+}
+
+.main{
+  width: 100%;
+  display: grid;
+  grid-template-rows: [hero-start] min-content [hero-end feeature-start] min-content [feature-end outro-start] min-content [outro-end];
+}

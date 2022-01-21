@@ -1,0 +1,109 @@
+@use "../abstracts/abstract" as abs;
+.header{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  padding: 2rem 2.5rem;
+  @media only screen and (min-width: abs.$bp-smallest){
+  }
+  &__logo{
+    max-height: 4rem;
+    width: 40%;
+    @media only screen and (min-width: abs.$bp-smallest){
+      width: 20%;
+    }
+  }
+  &__hamburger{
+    max-height: 3rem;
+    width: 25%;
+    fill: abs.$color-neutral--grayish-violet;
+    @media only screen and (min-width: abs.$bp-smallest){display: none;}
+  }
+
+  & .mobile-menu{
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 100%;
+    width: 90%;
+    min-height: 50vh;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: abs.$color-primary--dark-violet;
+    -webkit-animation: 1s menuToLeft forwards;
+    animation: 1s menuToLeft forwards;
+    &__list{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+      &-item{
+        color: abs.$color-neutral--white;
+        font-size: 1.8rem;
+        letter-spacing: 1.4px;
+      }
+    }
+    &__brace{
+      width: 100%;
+      height: 1px;
+      background-color: abs.$color-neutral--grayish-violet;
+    }
+    &__actions{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+      &-item{
+        width: 100%;
+        height: 5rem;
+        & .btn {width: 100%; height: 100%}
+      }
+    }
+  }
+
+  & .desktop-menu{
+    display: flex;
+    width: 80%;
+    &__list{
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      list-style: none;
+      &-item{
+        color: abs.$color-neutral--grayish-violet;
+        font-size: 1.6rem;
+        font-weight: abs.$font-bold;
+      }
+    }
+    & .btn-login{
+      margin-left: auto;
+      color: abs.$color-neutral--grayish-violet;
+    }
+
+  }
+}
+
+@keyframes menuToLeft {
+  100%{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@-webkit-keyframes menuToLeft {
+  100%{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+  }
+}

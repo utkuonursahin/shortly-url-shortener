@@ -1,0 +1,46 @@
+@use "../abstracts/abstract" as abs;
+.heading-1{
+  font-size: 3.5rem;
+  font-weight: abs.$font-bold;
+  color: abs.$color-neutral--dark-violet;
+  text-align: center;
+  @media only screen and(min-width: abs.$bp-smallest){
+    font-size: 6rem;
+    text-align: left;
+  }
+}
+
+.heading-2{
+  font-size: 2.7rem;
+  font-weight: abs.$font-bold;
+  color: abs.$color-neutral--dark-violet;
+  text-align: center;
+  @media only screen and (min-width: abs.$bp-smallest){
+    font-size: 3.5rem;
+  }
+}
+
+.heading-3{
+  font-size: 2rem;
+  font-weight: abs.$font-bold;
+  color: abs.$color-neutral--dark-violet;
+  text-align: center;
+}
+
+.heading-4{
+  font-size: 1.8rem;
+  letter-spacing: 1.4px;
+  font-weight: abs.$font-bold;
+  color: abs.$color-neutral--white;
+  text-align: center;
+  @media only screen and (min-width: abs.$bp-smallest){
+    font-size: 3rem;
+  }
+}
+
+.heading-5{
+  font-size: 1.4rem;
+  font-weight: abs.$font-bold;
+  color: abs.$color-neutral--white;
+  text-align: center;
+}

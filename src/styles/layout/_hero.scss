@@ -1,0 +1,55 @@
+@use "../abstracts/abstract" as abs;
+.hero{
+  position: relative;
+  grid-row: hero-start / hero-end;
+  max-width: 100vw;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: repeat(4,min-content);
+  grid-row-gap: 2rem;
+  padding-bottom: 10rem;
+  @media only screen and(min-width: abs.$bp-smallest){
+    grid-template-columns: repeat(2,1fr);
+    justify-items: start;
+    padding-bottom: 15rem;
+  }
+  &__illustration{
+    overflow: hidden;
+    @media only screen and(min-width: abs.$bp-smallest){
+      grid-column: 2 / 3;
+      grid-row: 1 / -1;
+      width: 100%;
+    }
+    & img{
+      width: 125%;
+      height: 100%;
+      @media only screen and(min-width: abs.$bp-smallest){width: 105%;}
+    }
+  }
+  & h1{
+    padding: 0 2rem;
+    @media only screen and(min-width: abs.$bp-smallest){
+      margin-top: 20%;
+      padding: 0 5rem;
+    }
+  }
+  &__description{
+    padding: 0 2rem;
+    font-size: 1.8rem;
+    color: abs.$color-neutral--grayish-violet;
+    text-align: center;
+    @media only screen and(min-width: abs.$bp-smallest){
+      text-align: left;
+      padding: 0 5rem;
+      font-size: 2.5rem;
+    }
+  }
+  & button{
+    height: 5rem;
+    width: 50%;
+    @media only screen and(min-width: abs.$bp-smallest){
+      width: 25%;
+      margin-left: 5rem;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@use "../abstracts/abstract" as abs;
+.footer{
+  display: grid;
+  grid-template-rows: repeat(3,min-content);
+  grid-row-gap: 3rem;
+  justify-items: center;
+  padding: 3rem 0;
+  background-color: abs.$color-neutral--dark-violet;
+  @media only screen and(min-width: abs.$bp-smallest){
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+  }
+  &__logo{
+    height: 4rem;
+    fill: abs.$color-neutral--white;
+    @media only screen and(min-width: abs.$bp-smallest){
+      grid-column: 1 / 2;
+    }
+  }
+  &__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    @media only screen and(min-width: abs.$bp-smallest){
+      grid-column: 2 / 3;
+      flex-direction: row;
+      gap: 10rem;
+    }
+    &-list{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      @media only screen and(min-width: abs.$bp-smallest){
+        align-items: start;
+      }
+      &--item{
+        color: abs.$color-neutral--gray;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &__social-list{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    list-style: none;
+    &--item{
+      height: 2.5rem;
+    }
+    & svg{
+      height: 100%;
+      width: 2.5rem;
+    }
+  }
+}

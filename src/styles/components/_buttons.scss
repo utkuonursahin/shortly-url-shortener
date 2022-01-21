@@ -1,0 +1,30 @@
+@use "../abstracts/abstract" as abs;
+.btn{
+  width: 15rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  font-weight: abs.$font-bold;
+  text-align: center;
+  border-radius: 5rem;
+}
+
+.btn-login{
+  color: abs.$color-neutral--white;
+  background-color: transparent;
+  border: none;
+
+}
+
+.btn-cta{
+  color: abs.$color-neutral--white;
+  background-color: abs.$color-primary--cyan;
+  border: none;
+}
+
+.btn-copy{
+  border: none;
+  border-radius: .5rem;
+  background-color: abs.$color-primary--cyan;
+  color: abs.$color-neutral--white;
+  &:focus{background-color: abs.$color-primary--dark-violet ;}
+}
