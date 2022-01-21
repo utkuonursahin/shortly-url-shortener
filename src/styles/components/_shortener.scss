@@ -54,16 +54,35 @@
     left: 0;
     width: 100%;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  &-popup{
+    position: relative;
     padding: 3rem 2rem;
+    width: 100%;
     z-index: 1;
     border-radius: .5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     background-color: abs.$color-neutral--white;
+    box-shadow: 0 0 1rem .25rem abs.$color-neutral--dark-violet;
     @media only screen and (min-width: abs.$bp-smallest){
       flex-direction: row;
       align-items: center;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: abs.$color-primary--cyan;
+      height: .5rem;
+      width: 1rem;
+      -webkit-animation: 10s copyTimeout forwards;
+      animation: 10s copyTimeout forwards;
     }
     &__long{
       font-size: 1.4rem;
@@ -83,17 +102,6 @@
     & .btn {
       width: 100%;
       @media only screen and (min-width: abs.$bp-smallest){width: 15rem;}
-    }
-    &::after{
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: abs.$color-primary--cyan;
-      height: .5rem;
-      width: 1rem;
-      -webkit-animation: 10s copyTimeout forwards;
-      animation: 10s copyTimeout forwards;
     }
   }
 }

@@ -1,11 +1,13 @@
 @use "../abstracts/abstract" as abs;
 .btn{
+  cursor: pointer;
   width: 15rem;
   height: 5rem;
   font-size: 1.8rem;
   font-weight: abs.$font-bold;
   text-align: center;
   border-radius: 5rem;
+  &:hover{opacity: .75;}
 }
 
 .btn-login{

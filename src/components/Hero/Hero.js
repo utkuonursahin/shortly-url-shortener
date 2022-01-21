@@ -1,4 +1,5 @@
 import Shortener from "./Shortener/Shortener";
+import {ShortenerProvider} from "../../context/ShortenerContext";
 
 const Hero = () => {
   return (
@@ -11,7 +12,9 @@ const Hero = () => {
           insights on how your links are performing
         </p>
         <button className="btn btn-cta">Get Started</button>
-        <Shortener/>
+        <ShortenerProvider>
+          <Shortener/>
+        </ShortenerProvider>
       </section>
   );
 };
