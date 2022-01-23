@@ -1,7 +1,10 @@
 import Shortener from "./Shortener/Shortener";
 import {ShortenerProvider} from "../../context/ShortenerContext";
+import {useError} from "../../context/ErrorContext";
+import Error from "../Error/Error";
 
 const Hero = () => {
+  const {error} = useError()
   return (
       <section className="hero">
         <picture className="hero__illustration">
@@ -15,6 +18,7 @@ const Hero = () => {
         <ShortenerProvider>
           <Shortener/>
         </ShortenerProvider>
+        {error && <Error/>}
       </section>
   );
 };

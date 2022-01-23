@@ -6,19 +6,25 @@ const Footer = () => {
         </svg>
         <nav className="footer__nav">
           <ul className="footer__nav-list">
-            <h5 className="heading-5">Features</h5>
+            <li className="footer__nav-list--item">
+              <h5 className="heading-5">Features</h5>
+            </li>
             <li className="footer__nav-list--item">Link Shortening</li>
             <li className="footer__nav-list--item">Branded Links</li>
             <li className="footer__nav-list--item">Analytics</li>
           </ul>
           <ul className="footer__nav-list">
-            <h5 className="heading-5">Resources</h5>
+            <li className="footer__nav-list--item">
+              <h5 className="heading-5">Resources</h5>
+            </li>
             <li className="footer__nav-list--item">Blog</li>
             <li className="footer__nav-list--item">Developers</li>
             <li className="footer__nav-list--item">Support</li>
           </ul>
           <ul className="footer__nav-list">
-            <h5 className="heading-5">Company</h5>
+            <li className="footer__nav-list--item">
+              <h5 className="heading-5">Company</h5>
+            </li>
             <li className="footer__nav-list--item">About</li>
             <li className="footer__nav-list--item">Our Team</li>
             <li className="footer__nav-list--item">Careers</li>

@@ -30,3 +30,16 @@
   color: abs.$color-neutral--white;
   &:focus{background-color: abs.$color-primary--dark-violet ;}
 }
+
+.btn-error{
+  border-radius: 1.5rem;
+  border: none;
+  background-color: abs.$color-neutral--dark-blue;
+  color: abs.$color-primary--cyan;
+  transition: all .25s ease-in-out;
+  align-self: center;
+  &:hover{
+    color: abs.$color-neutral--dark-blue;
+    background-color: abs.$color-neutral--white;
+  }
+}

@@ -1,3 +1,4 @@
+import {ErrorProvider} from "./context/ErrorContext";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Features from "./components/Features/Features";
@@ -9,7 +10,9 @@ function App() {
     <>
       <Header/>
       <main className="main">
-        <Hero/>
+        <ErrorProvider>
+          <Hero/>
+        </ErrorProvider>
         <Features/>
         <Outro/>
       </main>
