@@ -106,10 +106,11 @@
   }
 }
 
-@keyframes copyTimeout{
-  100%{width: 100%;}
+.spinner{
+  height: 100%;
+  width: 2.5rem;
+  fill: abs.$color-neutral--white;
+  -webkit-animation: .8s rotate infinite linear;
+  animation: .8s rotate infinite linear;
 }
 
-@-webkit-keyframes copyTimeout {
-  100%{width: 100%;}
-}

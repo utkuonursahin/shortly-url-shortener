@@ -17,3 +17,13 @@ $color-neutral--dark-violet:hsl(260, 8%, 14%);
 
 //BREAKPOINTS
 $bp-smallest:48em;
+
+//ANIMATIONS
+@keyframes copyTimeout{ 100%{width: 100%;} }
+@-webkit-keyframes copyTimeout { 100%{width: 100%;} }
+
+@keyframes rotate { 100%{transform: rotate(360deg)} }
+@-webkit-keyframes rotate { 100%{transform: rotate(360deg)} }
+
+
+
