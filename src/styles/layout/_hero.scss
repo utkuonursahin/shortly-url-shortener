@@ -7,11 +7,11 @@
   justify-items: center;
   grid-template-rows: repeat(4,min-content);
   grid-row-gap: 2rem;
-  padding-bottom: 10rem;
+  padding: 0 0 10rem 2rem;
   @media only screen and(min-width: abs.$bp-smallest){
     grid-template-columns: repeat(2,1fr);
     justify-items: start;
-    padding-bottom: 15rem;
+    padding: 0 0 15rem 5rem;
   }
   &__illustration{
     overflow: hidden;
@@ -27,29 +27,20 @@
     }
   }
   & h1{
-    padding: 0 2rem;
-    @media only screen and(min-width: abs.$bp-smallest){
-      margin-top: 20%;
-      padding: 0 5rem;
-    }
+    @media only screen and(min-width: abs.$bp-smallest){margin-top: 20%;}
   }
   &__description{
-    padding: 0 2rem;
     font-size: 1.8rem;
     color: abs.$color-neutral--grayish-violet;
     text-align: center;
     @media only screen and(min-width: abs.$bp-smallest){
       text-align: left;
-      padding: 0 5rem;
       font-size: 2.5rem;
     }
   }
-  & .btn-cta{
+  & button{
     height: 5rem;
     width: 50%;
-    @media only screen and(min-width: abs.$bp-smallest){
-      width: 25%;
-      margin-left: 5rem;
-    }
+    @media only screen and(min-width: abs.$bp-smallest){width: 25%;}
   }
 }
