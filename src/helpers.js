@@ -21,6 +21,7 @@ const handleSubmit = async function (e,setData,setIsClicked,setError){
     setIsClicked(prev => !prev) //remove spinner
     input.value = ''
   } catch(error){
+    window.scrollTo({top:0, behavior: 'smooth'})
     setIsClicked(prev => !prev) //remove spinner
     setError(error.message)
   }
