@@ -6,6 +6,7 @@ const getUrl = async function (url){
   try{
     const response = await Promise.race([axios(url),timeout(10)])
     if(!response.data?.ok || response.ok) throw new Error(`Something went wrong (${response.message}). Please try again later`)
+    return response
   } catch(error){throw error}
 }
 
